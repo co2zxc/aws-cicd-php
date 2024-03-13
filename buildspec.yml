@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - sudo yum install -y php-cli
+  build:
+    commands:
+      - php -v
+      - php -l index.php
+artifacts:
+  files:
+    - index.php
+    - appspec.yml
+    #- scripts/**/*
+  discard-paths: no
